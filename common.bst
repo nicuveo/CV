@@ -58,7 +58,7 @@ FUNCTION{info}
   nationality duplicate$ empty$ { pop$ } { "\MyNat{" write$ output write$ "}" write$ eol } if$
   birthdate   duplicate$ empty$ { pop$ } { "\MyBiD{" write$ output write$ "}" write$ eol } if$
   permis      duplicate$ empty$ { pop$ } { "\MyPer{" write$ output write$ "}" write$ eol } if$
-  "}"         write$ newline$
+  "~\\}"         write$ newline$
 
   "\chead{"                write$ newline$
   "{\Huge \sc "            write$
@@ -67,7 +67,7 @@ FUNCTION{info}
   output lastname          write$
   "}"                      write$ eol
   "\vspace{\HdrTitleSep} " write$
-  "{\large \bf "           write$
+  "{\Large \bf "           write$
   output resume            write$
   "}"                      write$ eol
   "}"                      write$ newline$
@@ -76,7 +76,7 @@ FUNCTION{info}
   phone     duplicate$ empty$ { pop$ } { output write$ eol } if$
   email     duplicate$ empty$ { pop$ } { output write$ eol } if$
   web       duplicate$ empty$ { pop$ } { output write$ eol } if$
-  "}"       write$ newline$
+  "~\\}"       write$ newline$
 }
 
 
@@ -205,7 +205,7 @@ FUNCTION{empty_page}
 {
   "\newpage"              write$ newline$
   "\thispagestyle{plain}" write$ newline$
-  "\headsep 0cm"          write$ newline$
+  "\headsep -1cm"         write$ newline$
 }
 
 FUNCTION{white_space}
