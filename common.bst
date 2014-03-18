@@ -179,7 +179,6 @@ FUNCTION{proj}
   eol nextrow
   output desc write$
   eol
-  eol
 }
 
 FUNCTION{misc}

@@ -1,15 +1,11 @@
 ## GENERAL INFOS
 
-IMG_DIR = ./img/
-LIB_DIR = ./lib/
+OUTPUT    = cv_en.pdf cv_fr.pdf
+PDF_CMD   = pdflatex -interaction nonstopmode
+BIB_CMD   = bibtex
 
-CLEAN = '*~' '\#*' '.\#*' '.DS_Store' '*.log' '*.aux' '*.toc'
+CLEAN = '*~' '\#*' '.\#*' '.DS_Store' '*.log' '*.aux' '*.toc' '*.nav' '*.out' '*.snm' '*.vrb' '*.blg' '*.bbl'
 
-
-## VARS
-
-OUTPUT = cv_en cv_fr
-FLAGS  = -q -c -I $(IMG_DIR) -I $(LIB_DIR)
 
 
 
@@ -19,32 +15,33 @@ all: $(OUTPUT);
 
 clean:
 	for f in ${CLEAN} ; do find . -name "$$f" | xargs rm -f ; done
+	rm -f ${OUTPUT}
 
-distclean: clean
-	rm -f *.pdf
+distclean: clean ;
 
 
 
 ## DEPENDENCIES
 
-cv_fr.pdf: cv_fr.tex cv_fr.bib common.tex common.bib common.bst
-cv_en.pdf: cv_en.tex cv_en.bib common.tex common.bib common.bst
+cv_fr.pdf: common.tex common.bib common.bst
+cv_en.pdf: common.tex common.bib common.bst
 
 
 
 ## GENERATION
 
-%.pdf: %.tex
-	texi2pdf $(FLAGS) $*.tex
+%.aux: %.tex
+	$(PDF_CMD) $* > /dev/null
 
-%.pdf:
-	@echo "Unable to find $*.tex, aborting."
-	@exit 2
+%.bbl: %.aux %.bib
+	$(BIB_CMD) $* > /dev/null
 
-%: %.pdf ;
+%.pdf: %.bbl
+	$(PDF_CMD) $* > /dev/null
+	$(PDF_CMD) $* > /dev/null
 
 
 
 ## SPECIALS
 
-.PRECIOUS: %.pdf ;
+.PRECIOUS: %.pdf %.aux %.bbl ;
