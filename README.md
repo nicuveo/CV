@@ -1,8 +1,4 @@
-                             -*- mode: outline -*-
-
-
-
-* CV
+## CV
 
 This is a small \LaTeX{} project that is used to make a nice and clean CV.
 I first got this template from Didier Verna (http://www.didierverna.com/),
@@ -12,24 +8,24 @@ Furthermore, you can have my CV by just building this project. :)
 
 
 
-* Build
+## Build
 
-$ make
+`make`
 
 
 
-* How to make your OWN
+## How to make your own
 
 All common code is made inside common* files.
 Translations and language-specific data is in cv_* files.
 
-common.tex describes the structure of the CV.
-common.bst describes how the content is displayed.
-cv_$LANG.bib contains the content of the CV.
+- *common.tex* describes the structure of the CV.
+- *common.bst* describes how the content is displayed.
+- *cv_$LANG.bib* contains the content of the CV.
 
 
 
-* Dark magic
+## Dark magic
 
 Most of the formatting choices were the result of "shotgun approximation" with
 magic constants. If you're a LaTeX guru and spot horrible mistakes, feel free
