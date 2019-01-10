@@ -20,13 +20,16 @@
 \rfoot{\addressfont\itshape\textcolor{gray}{\thepage{} / \pageref{LastPage}}}
 
 \renewcommand{\homepagesymbol}{\faHome~}
+\renewcommand*{\namefont}{\yanone\fontsize{42}{42}\mdseries\upshape}
+\renewcommand*{\titlefont}{\yanone\fontsize{22}{22}\mdseries\upshape}
 \newcommand{\myhref}[2]{{\color{color1}\href{#1}{#2}}}%
 \setlength{\leftmargini}{2em}
 
 
 % personal info
-\name{\fontsize{42}{42}\yanone{}Antoine}{Leblanc}
-\title{\fontsize{22}{22}\yanone{}Software engineer, Haskell teacher,\newline{}video games developer, demoscener}
+
+\name{Antoine}{Leblanc}
+\title{Software engineer, Haskell teacher,\newline{}video games developer, demoscener}
 \email{antoine.jp.leblanc@gmail.com}
 \homepage{www.nauths.fr/en}
 \social[linkedin]{antoineleblanc}
@@ -41,18 +44,18 @@
 \makecvtitle
 
 \section{Experience}
-\cventry{since 2015}{Site Reliability Engineer}{Google}{Dublin}{}{SRE for Bigtable and Cloud Bigtable:%
+\cventry[0.7em]{since 2015}{Site Reliability Engineer}{Google}{Dublin}{}{SRE for Bigtable and Cloud Bigtable:%
 \begin{itemize}%
 \item Defined \myhref{https://cloud.google.com/bigtable/}{Cloud Bigtable}'s orginal \myhref{https://en.wikipedia.org/wiki/Service-level_objective}{SLOs} and \myhref{https://en.wikipedia.org/wiki/Service-level_agreement}{SLAs}.
 \item Integrated an experiement framework in Cloud Bigtable's codebase.
 \item Rewrote the resource planning pipeline to better predict users' demand.
 \item On-call for the service.
-\end{itemize}%
+\end{itemize}\vspace{0.4em}%
 Haskell teacher (20\% time):%
 \begin{itemize}%
 \item Created two lessons (101, 102) and relevant exercises.
 \item Taught them worldwide, reaching more than 600 people.
-\end{itemize}%
+\end{itemize}\vspace{0.4em}%
 Community contributions:%
 \begin{itemize}%
 \item Presented SRE at Google Cloud Summit (on \myhref{https://youtu.be/ZKbU5OIXuxs}{YouTube}, in French).
@@ -60,11 +63,10 @@ Community contributions:%
 \item Started an effort to make all Google code and documentation gender neutral.
 \item Started an initiative to teach computer science basics to non-engineers.
 \end{itemize}}
-\cventry{2012 -- 2015}{Software Engineer}{Criteo}{Paris}{}{%
+\cventry[0.7em]{2012 -- 2015}{Software Engineer}{Criteo}{Paris}{}{%
   Worked on / maintained Criteo's ad arbitrage and ad serving pipeline.\newline{}
-  Developed a small ad-hoc continuous testing platform.%
-}
-\cventry{2009 -- 2012}{Cofounder}{Altribe}{Paris}{}{%
+  Developed a small ad-hoc continuous testing platform.}
+\cventry[0.7em]{2009 -- 2012}{Cofounder}{Altribe}{Paris}{}{%
   Created a startup focused on massively multiplayer online strategic games.\newline{}%
   Developed the game client for our first project:%
 \begin{itemize}%
@@ -73,7 +75,7 @@ Community contributions:%
   render-to-texture and interpolation between different zoom levels.
 \end{itemize}}
 \subsection{Internships}
-\cventry{2009}{Software Engineering Intern}{Dassault Systèmes}{Vélizy (France)}{}{Performance analysis of a surface deformation and animation algorithm.}
+\cventry[0.7em]{2009}{Software Engineering Intern}{Dassault Systèmes}{Vélizy (France)}{}{Six months internship (February -- July).\newline{}Performance analysis of a surface deformation and animation algorithm.}
 
 \section{Education}
 \cventry{2004 -- 2009}{CS engineering degree}{\myhref{http://epita.fr}{EPITA}}{Paris}{}{Student / researcher at the \myhref{http://lrde.epita.fr}{LRDE}, EPITA's R\&D lab.\newline{}Graduated from the Research major.}
