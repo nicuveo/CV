@@ -1,0 +1,108 @@
+% resume, made using the moderncv template
+% https://github.com/xdanaux/moderncv
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{lastpage}
+\usepackage[scale=0.75]{geometry}
+
+
+% theme
+
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\newfontfamily\yanone[]{YanoneKaffeesatz-Regular}
+\setsansfont{Liberation Sans}
+\rfoot{\addressfont\itshape\textcolor{gray}{\thepage{} / \pageref{LastPage}}}
+
+\renewcommand{\homepagesymbol}{\faHome~}
+\newcommand{\myhref}[2]{{\color{color1}\href{#1}{#2}}}%
+\setlength{\leftmargini}{2em}
+
+
+% personal info
+\name{\fontsize{42}{42}\yanone{}Antoine}{Leblanc}
+\title{\fontsize{22}{22}\yanone{}Software engineer, Haskell teacher,\newline{}video games developer, demoscener}
+\email{antoine.jp.leblanc@gmail.com}
+\homepage{www.nauths.fr/en}
+\social[linkedin]{antoineleblanc}
+\social[twitter]{nicuveo}
+\social[github]{nicuveo}
+
+
+% document
+
+\begin{document}
+
+\makecvtitle
+
+\section{Experience}
+\cventry{since 2015}{Site Reliability Engineer}{Google}{Dublin}{}{SRE for Bigtable and Cloud Bigtable:%
+\begin{itemize}%
+\item Defined \myhref{https://cloud.google.com/bigtable/}{Cloud Bigtable}'s orginal \myhref{https://en.wikipedia.org/wiki/Service-level_objective}{SLOs} and \myhref{https://en.wikipedia.org/wiki/Service-level_agreement}{SLAs}.
+\item Integrated an experiement framework in Cloud Bigtable's codebase.
+\item Rewrote the resource planning pipeline to better predict users' demand.
+\item On-call for the service.
+\end{itemize}%
+Haskell teacher (20\% time):%
+\begin{itemize}%
+\item Created two lessons (101, 102) and relevant exercises.
+\item Taught them worldwide, reaching more than 600 people.
+\end{itemize}%
+Community contributions:%
+\begin{itemize}%
+\item Presented SRE at Google Cloud Summit (on \myhref{https://youtu.be/ZKbU5OIXuxs}{YouTube}, in French).
+\item Worked with VP of Diversity to improve Google's response to online threats.
+\item Started an effort to make all Google code and documentation gender neutral.
+\item Started an initiative to teach computer science basics to non-engineers.
+\end{itemize}}
+\cventry{2012 -- 2015}{Software Engineer}{Criteo}{Paris}{}{%
+  Worked on / maintained Criteo's ad arbitrage and ad serving pipeline.\newline{}
+  Developed a small ad-hoc continuous testing platform.%
+}
+\cventry{2009 -- 2012}{Cofounder}{Altribe}{Paris}{}{%
+  Created a startup focused on massively multiplayer online strategic games.\newline{}%
+  Developed the game client for our first project:%
+\begin{itemize}%
+\item Multi-platform codebase, using C++, Boost, Qt, and OpenGL.
+\item Developed a tiled map renderer from scratch, using
+  render-to-texture and interpolation between different zoom levels.
+\end{itemize}}
+\subsection{Internships}
+\cventry{2009}{Software Engineering Intern}{Dassault Systèmes}{Vélizy (France)}{}{Performance analysis of a surface deformation and animation algorithm.}
+
+\section{Education}
+\cventry{2004 -- 2009}{CS engineering degree}{\myhref{http://epita.fr}{EPITA}}{Paris}{}{Student / researcher at the \myhref{http://lrde.epita.fr}{LRDE}, EPITA's R\&D lab.\newline{}Graduated from the Research major.}
+
+\clearpage
+\section{Languages}
+\cvitem{English}{Fluent}{}
+\cvitem{French}{Native speaker}{}
+\cvitem{German}{High-school level}{}
+\cvitem{Japanese}{Beginner}{}
+
+\section{Projects, hobbies, and achievements}
+\cvitem{Demoscene}{Member of \myhref{http://www.ctrl-alt-test.fr}{Ctrl-Alt-Test} demoscene group.\newline{}\myhref{http://www.ctrl-alt-test.fr/productions/b-incubation/}{B - incubation}:%
+\begin{itemize}%
+\item 1st place at \myhref{https://www.evoke.eu}{Evoke} 2010;
+\item nominated for 2010 Scene Awards for breakthrough performance.
+\vspace{-\baselineskip}\mbox{}
+\end{itemize}}
+\cvitem{Live coding}{Solving and explaining problems, usually in Haskell, on \myhref{https://www.twitch.tv/nicuveo}{Twitch}.}
+\cvitem{Volunteering}{Former member of the charity choir \myhref{http://note-et-bien.org}{Note et Bien}.}
+\cvitem{Contests}{Winner of the \myhref{http://www.epita.fr/2015/03/20/antoine-leblanc-meilleur-dev-de-france-2015}{Best Dev of France 2015} contest.}
+\cvitem{Music}{Piano player. Also the proud owner of a \myhref{https://en.wikipedia.org/wiki/Theremin}{theremin} I can't play!}
+
+\section{Obligatory skills list}
+\cvitem{Languages}{C++, Haskell, Python, Rust, Bash\ldots{}}{}
+\cvitem{Presentation}{\LaTeX{}, Beamer}{}
+\cvitem{Editor}{Emacs}{}
+
+\section{Misc}
+\cvitem{CV}{This CV was made with \LaTeX. Sources can be found on \myhref{https://github.com/nicuveo/CV}{Github}.}
+
+\end{document}
