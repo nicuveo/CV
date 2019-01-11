@@ -8,6 +8,8 @@
 \usepackage{fontspec}
 \usepackage{lastpage}
 \usepackage[scale=0.75]{geometry}
+\usepackage{ulem}
+
 
 
 % theme
@@ -17,13 +19,15 @@
 
 \newfontfamily\yanone[]{YanoneKaffeesatz-Regular}
 \setsansfont{Liberation Sans}
-\rfoot{\addressfont\itshape\textcolor{gray}{\thepage{} / \pageref{LastPage}}}
+\rfoot{\addressfont\itshape\textcolor{color2}{\thepage{} / \pageref{LastPage}}}
+\renewcommand{\ULdepth}{1.8pt}
 
 \renewcommand{\homepagesymbol}{\faHome~}
 \renewcommand*{\namefont}{\yanone\fontsize{42}{42}\mdseries\upshape}
 \renewcommand*{\titlefont}{\yanone\fontsize{22}{22}\mdseries\upshape}
-\newcommand{\myhref}[2]{{\color{color1}\href{#1}{#2}}}%
+\newcommand{\myhref}[2]{\href{#1}{\color{color1!64!color2}\uline{#2}}}%
 \setlength{\leftmargini}{2em}
+
 
 
 % personal info
@@ -37,6 +41,7 @@
 \social[github]{nicuveo}
 
 
+
 % document
 
 \begin{document}
@@ -44,17 +49,17 @@
 \makecvtitle
 
 \section{Experience}
-\cventry[0.7em]{since 2015}{Site Reliability Engineer}{Google}{Dublin}{}{SRE for Bigtable and Cloud Bigtable:%
+\cventry[0.8em]{since 2015}{Site Reliability Engineer}{Google}{Dublin}{}{SRE for Bigtable and Cloud Bigtable:%
 \begin{itemize}%
 \item Defined \myhref{https://cloud.google.com/bigtable/}{Cloud Bigtable}'s orginal \myhref{https://en.wikipedia.org/wiki/Service-level_objective}{SLOs} and \myhref{https://en.wikipedia.org/wiki/Service-level_agreement}{SLAs}.
-\item Integrated an experiement framework in Cloud Bigtable's codebase.
+\item Integrated an experiment framework in Cloud Bigtable's codebase.
 \item Rewrote the resource planning pipeline to better predict users' demand.
 \item On-call for the service.
 \end{itemize}\vspace{0.4em}%
 Haskell teacher (20\% time):%
 \begin{itemize}%
 \item Created two lessons (101, 102) and relevant exercises.
-\item Taught them worldwide, reaching more than 600 people.
+\item Taught them worldwide, reaching more than 600 people, 95\% approval rate.
 \end{itemize}\vspace{0.4em}%
 Community contributions:%
 \begin{itemize}%
@@ -63,10 +68,10 @@ Community contributions:%
 \item Started an effort to make all Google code and documentation gender neutral.
 \item Started an initiative to teach computer science basics to non-engineers.
 \end{itemize}}
-\cventry[0.7em]{2012 -- 2015}{Software Engineer}{Criteo}{Paris}{}{%
+\cventry[0.8em]{2012 -- 2015}{Software Engineer}{Criteo}{Paris}{}{%
   Worked on / maintained Criteo's ad arbitrage and ad serving pipeline.\newline{}
   Developed a small ad-hoc continuous testing platform.}
-\cventry[0.7em]{2009 -- 2012}{Cofounder}{Altribe}{Paris}{}{%
+\cventry[0.8em]{2009 -- 2012}{Cofounder}{Altribe}{Paris}{}{%
   Created a startup focused on massively multiplayer online strategic games.\newline{}%
   Developed the game client for our first project:%
 \begin{itemize}%
@@ -75,18 +80,13 @@ Community contributions:%
   render-to-texture and interpolation between different zoom levels.
 \end{itemize}}
 \subsection{Internships}
-\cventry[0.7em]{2009}{Software Engineering Intern}{Dassault Systèmes}{Vélizy (France)}{}{Six months internship (February -- July).\newline{}Performance analysis of a surface deformation and animation algorithm.}
+\cventry[0.8em]{2009}{Software Engineering Intern}{Dassault Systèmes}{Vélizy (France)}{}{Six months internship (February -- July).\newline{}Performance analysis of a surface deformation and animation algorithm.}
 
+\vspace{0.4em}
 \section{Education}
-\cventry{2004 -- 2009}{CS engineering degree}{\myhref{http://epita.fr}{EPITA}}{Paris}{}{Student / researcher at the \myhref{http://lrde.epita.fr}{LRDE}, EPITA's R\&D lab.\newline{}Graduated from the Research major.}
+\cventry{2004 -- 2009}{CS engineering degree}{\myhref{http://international.epita.fr}{EPITA}}{Paris}{}{Student / researcher at the \myhref{http://international.epita.fr/research-development-laboratory.aspx}{LRDE}, EPITA's R\&D lab.\newline{}Graduated from the Research major.}
 
 \clearpage
-\section{Languages}
-\cvitem{English}{Fluent}{}
-\cvitem{French}{Native speaker}{}
-\cvitem{German}{High-school level}{}
-\cvitem{Japanese}{Beginner}{}
-
 \section{Projects, hobbies, and achievements}
 \cvitem{Demoscene}{Member of \myhref{http://www.ctrl-alt-test.fr}{Ctrl-Alt-Test} demoscene group.\newline{}\myhref{http://www.ctrl-alt-test.fr/productions/b-incubation/}{B - incubation}:%
 \begin{itemize}%
@@ -99,11 +99,20 @@ Community contributions:%
 \cvitem{Contests}{Winner of the \myhref{http://www.epita.fr/2015/03/20/antoine-leblanc-meilleur-dev-de-france-2015}{Best Dev of France 2015} contest.}
 \cvitem{Music}{Piano player. Also the proud owner of a \myhref{https://en.wikipedia.org/wiki/Theremin}{theremin} I can't play!}
 
+\vspace{0.4em}
+\section{Languages}
+\cvitem{English}{Fluent}{}
+\cvitem{French}{Native speaker}{}
+\cvitem{German}{High-school level}{}
+\cvitem{Japanese}{Beginner}{}
+
+\vspace{0.4em}
 \section{Obligatory skills list}
 \cvitem{Languages}{C++, Haskell, Python, Rust, Bash\ldots{}}{}
 \cvitem{Presentation}{\LaTeX{}, Beamer}{}
 \cvitem{Editor}{Emacs}{}
 
+\vspace{0.4em}
 \section{Misc}
 \cvitem{CV}{This CV was made with \LaTeX. Sources can be found on \myhref{https://github.com/nicuveo/CV}{Github}.}
 
