@@ -18,8 +18,8 @@ clean:
 ## GENERATION
 
 %.pdf: %.tex
-	xelatex -interaction nonstopmode $*.tex
-	xelatex -interaction nonstopmode $*.tex
+	lualatex -interaction nonstopmode $*.tex
+	lualatex -interaction nonstopmode $*.tex
 
 
 
