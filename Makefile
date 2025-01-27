@@ -4,7 +4,6 @@ OUTPUT = resume.pdf
 CLEAN  = '*~' '\#*' '.\#*' '.DS_Store' '*.log' '*.aux' '*.toc' '*.nav' '*.out' '*.snm' '*.vrb' '*.blg' '*.bbl'
 
 
-
 ## MAIN
 
 all: $(OUTPUT);
@@ -14,13 +13,12 @@ clean:
 	rm -f ${OUTPUT}
 
 
-
 ## GENERATION
 
 %.pdf: %.tex
 	lualatex -interaction nonstopmode $*.tex
 	lualatex -interaction nonstopmode $*.tex
-
+	lualatex -interaction nonstopmode $*.tex
 
 
 ## SPECIALS
