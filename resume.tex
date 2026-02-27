@@ -14,8 +14,10 @@
 
 % theme
 
-\moderncvstyle{classic}
 \moderncvcolor{blue}
+\moderncvstyle{classic}
+\colorlet{lastnamecolor}{black}
+\colorlet{firstnamecolor}{black}
 
 \newfontfamily\yanone[]{YanoneKaffeesatz-Regular}
 \setsansfont{Liberation Sans}
@@ -32,12 +34,11 @@
 
 % personal info
 
-\name{Antoine}{Leblanc}
+\name{Antoine}{~Leblanc}
 \title{Engineer, teacher, mentor}
 \email{antoine.jp.leblanc@gmail.com}
 \homepage{linktr.ee/nicuveo}
 \social[linkedin]{antoineleblanc}
-\social[twitter]{nicuveo}
 \social[github]{nicuveo}
 
 
@@ -49,8 +50,12 @@
 \makecvtitle
 
 \vspace{0.4cm}
-
 \section{Experience}
+\cventry[1em]{2025}{Sabbatical leave}{}{}{}{%
+  Started an educational project: writing a compiler, from scratch, in Haskell, entirely live on twitch, twice a week.
+  \newline{}Repository: \myhref{https://github.com/nicuveo/pietre}{github.com/nicuveo/pietre}
+  \newline{}Twitch channel: \myhref{https://twitch.tv/nicuveo}{twitch.tv/nicuveo}
+}
 \cventry[1em]{2023 -- 2024}{Staff Software Engineer}{GitGuardian}{Remote}{}{%
   Project lead and main contributor of a project to scan all of PyPI as part of GitGuardian's \myhref{https://www.gitguardian.com/monitor-public-github-for-secrets}{public monitoring pipeline}.
 }
@@ -66,9 +71,6 @@ Lead an internal effort to improve / consolidate engineering documentation.\newl
 Lead an internal effort to modularize / untangle the codebase.\newline{}
 Onboarding and mentoring of server engineers.\newline{}
 Wrote \myhref{https://hasura.io/blog/parser-combinators-walkthrough/}{an article} to help with Haskell outreach.%
-}
-\cventry[1em]{2020}{Mentor}{Exercism}{}{}{%
-  Weekly volunteering effort: mentor on the Haskell track.%
 }
 \cventry[1em]{2019}{Software Engineer}{Stripe}{Dublin}{}{%
   Worked on SAML authentication flows for Stripe's dashboard.\newline{}
@@ -122,10 +124,11 @@ Community contributions:%
 \begin{itemize}%
 \item 1st place at \myhref{https://www.evoke.eu}{Evoke} 2010;
 \item nominated for 2010 Scene Awards for breakthrough performance.
-\vspace{-\baselineskip}\mbox{}
+% \vspace{-\baselineskip}\mbox{}
 \end{itemize}}
 \cvitem{Live coding}{Solving and explaining problems, usually in Haskell, on \myhref{https://www.twitch.tv/nicuveo}{Twitch}.}
 \cvitem{Volunteering}{Former member of the charity choir \myhref{http://note-et-bien.org}{Note et Bien}.}
+\cvitem{Mentoring}{Former mentor on the Haskell track of \myhref{https://exercism.org/}{Exercism}.}
 
 \vspace{0.6em}
 \section{Languages}
@@ -134,7 +137,6 @@ Community contributions:%
 \cvitem{Japanese}{\myhref{https://www.jlpt.jp/e/about/levelsummary.html}{N5 level}}{}
 \cvitem{German}{High-school level}{}
 
-\clearpage
 \section{Obligatory skills list}
 \cvitem{Languages}{C++, Haskell, Python, Rust, Ruby, Bash\ldots{}}{}
 \cvitem{Presentation}{\LaTeX{}, Beamer}{}
